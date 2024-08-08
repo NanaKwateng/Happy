@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Us</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="row">
+            <div class="column">
+                <div class="card card-body">
+                    <input type="text" id="search-input" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-striged">
+            <tr class="bg-info">
+                <th class="bg-info" data-colname="name" data-order="desc">Name</th>
+
+                <th data-colname="age" data-order="desc">Age</th>
+                <th data-colname="birthdate">birthdate</th>
+            </tr>
+
+            <tbody id="myTable"></tbody>
+        </table>
+    </div>
+
+
+    <script>
+        
+        // MANAGE THE TABLE
+        var myArray = [
+            {'name': 'Michael', 'age': '30', 'birthdate': '11/10/1952'},
+            {'name': 'Harry', 'age': '25', 'birthdate': '11/10/1952'},
+            {'name': 'Murray', 'age': '32', 'birthdate': '11/10/1991'},
+            {'name': 'Kelvin', 'age': '28', 'birthdate': '11/10/1994'},
+            {'name': 'Bruce', 'age': '19', 'birthdate': '11/10/1999'},
+            {'name': 'Ben', 'age': '48', 'birthdate': '11/10/1985'},
+            {'name': 'James', 'age': '20', 'birthdate': '11/10/2002'},
+            {'name': 'Magarete', 'age': '19', 'birthdate': '11/10/1952'},
+            {'name': 'Jones', 'age': '30', 'birthdate': '11/10/1952'},
+            {'name': 'Anderson', 'age': '29', 'birthdate': '11/10/1995'}
+        ]
+
+        //Adding the keyUp events to the searchInput with the JQuery
+        ${'#search-input'}.on{'keyup', function(){
+            var value = $(this).val()
+            console.log('Value: ', value)
+        }}
+
+        buildTable(myArray)
+
+        function buildTable(data) {
+            var Table = document.getElementById('myTable')
+            table.innerHTML = ''
+            for(var i = 0; i < data.length; i++) {
+                var row = `<tr>
+                            <td>${data[i].name}</td>
+                            <td>${data[i].age}</td>
+                            <td>${data[i].birthdate}</td> 
+                        </tr>`
+            }
+        }
+    </script>
+</body>
+</html>

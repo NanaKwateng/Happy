@@ -1,0 +1,527 @@
+/* ====================== HEADER LAYOUT ==============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: ;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root {
+    --main-color: #00abf0;
+    --text-color: #fff;
+    --topic-color: dodgerblue;
+    --other-bue: #43a5f6;
+    --section-padding: 2rem 6%;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body {
+    min-height: 100vh;
+}
+section {
+    padding: 0 7%;
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--section-padding);
+    background-color: #fefefe;
+    backdrop-filter: blur(20px);
+    opacity: .93;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 .3rem .3rem rgba(0, 0, 0, .2);
+    z-index: 100;
+}
+
+
+.menu-bar {
+    display: none;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.header .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 5px 10px 20px #0004;
+}
+
+.header .logo h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.header .logo h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+header .sign-in {
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+    color: #444;
+    padding: 7px;
+    border: 2px solid red;
+    border-radius: 20px;
+    transition: .5s ease-in-out;
+    background: transparent;
+}
+header .sign-in:hover {
+    color: red;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    margin-left: 2.5rem;
+    padding: .5rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #000;
+    transition: .3s;
+    overflow: hidden;
+}
+.navbar a:hover,.navbar a:active,.navbar a:focus {
+    color: #00abf0;
+    border-bottom: 2px solid #00abf0;
+}
+
+.header .icons button {
+    padding: 3px;
+    box-shadow: 0px 1px 1px #0004;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 1.6rem;
+}
+
+.header .icons button:hover,
+.header .icons button:active {
+    color: #00abf0;
+}
+
+.header .icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all .3s ease;
+    padding: 3px;
+}
+/* ====================== HEADER LAYOUT ==============================*/
+
+
+
+/* ---------------------- FOOTER LAYOUT ------------------------------ */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 3rem 11%;
+    background: linear-gradient(45deg, dodgerblue 50%, steelblue 50%);
+    color: #fff;
+    position: relative;
+    transition: 1s ease-in-out;
+}
+
+footer .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    flex-flow: row wrap;
+    flex: 1 1 auto;
+    place-content: center;
+    padding: 15px;
+} 
+
+.footer-box {
+    padding: 5px;
+    /* display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;*/
+    text-align: center;
+    flex: 1 1 20rem;
+    width: 200px;
+    height: 200px;
+    /* border: 2px solid #bbb; */
+    box-shadow: 0 0 7px #0003;
+}
+
+footer .title {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+footer .description {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+footer a {
+    display: block;
+    color: #fff;
+    padding: 7px;
+    transition: .5s ease;
+}
+footer a:hover {
+    transform: scale(1.15);
+}
+
+footer i {
+    padding: 5px;
+    border: 2px solid #fff;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    background: #fff;
+    color: dodgerblue;
+    box-shadow: 0 0 1.3px #0003;
+    text-shadow: 0 0 8px #0004;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer .copy {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+    gap: 1.5rem;
+    width: 50%;
+    padding-top: 2.5rem;
+    border-top: 2px solid #fff;
+    margin-top: 2em;
+}
+
+footer .copy i {
+    color: #fff;
+    font-size: 1.5em;
+    padding: 5px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: .5s ;
+}
+footer .copy i:hover {
+    background: steelblue;
+    border: none;
+}
+footer h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+
+footer .none {
+    box-shadow: none;
+}
+
+
+
+/* ---------------------- FOOTER LAYOUT ------------------------------ */
+
+
+/* ========================= NAVIAGATION PANE LAYOUT ================= */
+.navigation {
+    z-index: 999;
+    position: fixed;
+    background: url(../images/logo1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 45%;
+    height: 100vh;
+    border-right: 2px solid #fff5;
+    box-shadow: 2px 8px 8px #0004;
+    display: flex;
+    align-content: center;
+    justify-content: left;
+    transform: translateY(100%);
+    transition: .3s;
+    transition-delay: .25s;
+    transform-origin: right;
+}
+.navigation.active {
+    transform: translateY(0);
+    transition: .25s;
+}
+
+.pane {
+    position: relative;
+    inset: 0 0 0 0;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scene {
+    position: absolute;
+    inset: 0 0 0 0;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    background: #fff5;
+}
+
+.navigation h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.navigation .class {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    border-top: 2px groove #0005;
+    transition: 1s ease-in-out;
+    
+}
+
+.navigation button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 50px;
+    transition: .25s;
+    transition-property: all;
+    background: transparent;
+}
+
+.navigation a {
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 10px 5px;
+    transition: .25s;
+    border-radius: 50px;
+}
+.navigation a:is(:hover, :focus-within) {
+    background: #fff5;
+    transform: scale(1.02);
+}
+
+.navigation button:hover {
+    background: #fff6;
+}
+
+.navigation i {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: steelblue;
+}
+
+.navigation span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navigation .settings {
+    display: none;
+}
+
+.navigation .settings.reveal {
+    display: initial;
+}
+
+.navigation .topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.navigation .social {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    place-content: center;
+    margin-top: 5px;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    border: 1px solid #0004;
+    border-radius: 7px;
+    /* animation-name: social;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite; */
+}
+
+.navigation .show {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.navigation .description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+
+}
+/* ========================= NAVIAGATION PANE LAYOUT ================= */
+
+
+/* -------------------------- POPUP SCREEN ----------------------------*/
+.popup-screen {
+    z-index: 99999;
+    position: fixed;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: 0.5s ease;
+    transition-property: visibility;
+}
+
+
+.popup-screen.display {
+    visibility: visible;
+}
+
+.popup-box {
+    position: relative;
+    background: #0003;
+    backdrop-filter: blur(80%);
+    max-width: 350px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 20px;
+    padding: 50px 40px;
+    border-radius: 20px;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-property: transform;
+    text-align: center;
+}
+
+.popup-screen.display .popup-box {
+    transform: scale(1);
+}
+
+.popup-box h3 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.popup-box p {
+    color: #0006;
+    margin-bottom: 30px;
+}
+
+.popup-box button {
+    color: #fff;
+    background: red;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 7px 7px;
+    border-radius: 3px;
+}
+
+.popup-box .close-btn {
+    position: absolute;
+    font-size: 1em;
+    font-size: 2em;
+    color: #fff;
+    right: 0;
+    top: 0;
+    margin: 15px;
+    cursor: pointer;
+}
+
+/* --------------------------- POPUP SCREEN ---------------------------*/
+
+
+/* ------------------------- BREAK POINTS -----------------------*/
+
+@media (min-width:1020px) {
+    
+footer .footer-container {
+    flex-flow: row nowrap;
+} 
+}
+
+@media (max-width:466px) {
+    section {
+        padding: 0 5%;
+    }
+}
+
+@media(max-width:325px) {
+    html{
+        font-size: 50%;
+    }
+
+    section {
+        padding: 0 2%;
+    }
+}
+ 
+@media (max-width: 466px) {
+    .navigation {
+        width: 75%;
+    }
+}
+
+@media (max-width:770px) {
+    .header .navbar {
+        display: none;
+    }
+}
+/* ------------------------- BREAK POINTS -----------------------*/

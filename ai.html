@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+</head>
+
+<style>
+    .slider {
+        display: flex;
+        overflow: hidden; /* Hide slides outside of container */
+    }
+
+    .slide {
+        width: 100%; /* Make each slide take full width */
+        transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px;
+    }
+</style>
+<body>
+
+    <div class="slider">
+        <div class="slide">
+            <img src="images/camera1.jpg" alt="Slide 1">
+            <div class="caption">Caption for Slide 1</div>
+        </div>
+        <div class="slide">
+            <img src="images/drum sticks.jpg" alt="Slide 2">
+            <div class="caption">Caption for Slide 2</div>
+        </div>
+        <div class="slide">
+            <img src="images/1000066179.jpg" alt="Slide 2">
+            <div class="caption">Caption for Slide 2</div>
+        </div>
+        <div class="slide">
+            <img src="images/blue-back1.jpg" alt="Slide 2">
+            <div class="caption">Caption for Slide 2</div>
+        </div>
+        <div class="slide">
+            <img src="images/drum sticks.jpg" alt="Slide 2">
+            <div class="caption">Caption for Slide 2</div>
+        </div>
+        <div class="slide">
+            <img src="images/elijah tv.jpg" alt="Slide 2">
+            <div class="caption">Caption for Slide 2</div>
+        </div>
+        <!-- Add more slides as needed -->
+    </div>
+
+    <script>
+         // script.js
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide() {
+            slides[currentSlide].style.transform = 'translateX(-100%)'; // Move the current slide off-screen
+            currentSlide = (currentSlide + 1) % slides.length; // Move to the next slide
+            slides[currentSlide].style.transform = 'translateX(0)'; // Show the new slide
+        }
+
+        setInterval(showSlide, 3000); // Change slide every 3 seconds
+    </script> 
+
+</body>
+</html>

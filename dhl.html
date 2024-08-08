@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="HOP">
+    <meta name="description" content="This page was designed to assist all who have by one way or another had an encounter with the Prophet of God">
+
+    <link rel="stylesheet" href="css/dhl.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="images/logo1.jpg" type="image/x-icon">
+    <title>Da Heavenly Levites</title>
+</head>
+<body>
+
+    
+    
+   <!-- ======================= HEADER SECTION =====================  -->
+   <header>
+        <h3 style="font-size: 2em;color: #fff9;">D H L</h3>
+        <div class="icons">
+            <a href="app.html"><i class='bx bx-arrow-back'></i></a>
+        </div>
+   </header>
+   <!-- ======================= HEADER SECTION =====================  -->
+
+   <main class="main">
+
+    <video src="video/Da Heavenly Levites Spirit-Filled Ministration LIVE At External Praise 2022 _DaHeavenlyLevites _DHL(720P_60FPS).mp4" class="video-slide" autoplay muted loop></video>
+
+    <video src="video/Love Expressed 2023 Episode 10 _ Da Heavenly Levites(720P_HD).mp4"class="video-slide" autoplay muted loop></video>
+
+    <video src="video/Da Heavenly Levites _ Kwaku Kyei Baffour Benedict(720P_HD).mp4"class="video-slide" autoplay muted loop></video>
+
+    <video src="video/Love Expressed 2023 Episode18 _ Da Heavenly Levites(720P_HD).mp4"class="video-slide" autoplay muted loop></video>
+
+    <video src="video/Odo Ben Ni - Da Heavenly Levites(720P_HD).mp4" class="video-slide" autoplay muted loop></video>
+
+
+        <div class="content">
+           <div class="text-content">
+                <div class="topic">
+                    <span>DA</span>
+                    <h1>Heavenly</h1>
+                    <h3>Levite Singers</h3>
+                </div>
+
+                <div class="description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, aperiam! Fugit dignissimos veritatis quia maiores delectus odio sit est distinctio, dolorem neque nisi totam doloribus illum atque vitae debitis. Veritatis magnam repellendus maxime corrupti modi hic unde eligendi atque ullam. Eos neque possimus incidunt aut accusantium ad ipsam facilis consequatur!</p>
+
+                    <div class="stars">
+                        &star;&star;&star;&star;&star;
+                    </div>
+                </div>
+<!-- 
+                <div class="channel">
+                    <p>Download and Subscribe</p>
+                    <div class="download">
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                        <a href="#"><i class='bx bxl-tiktok'></i></a>
+                        <a href="#"><i class='bx bxl-spotify'></i></a>
+                    </div>
+                </div>
+                <p>Da Heavenly Levites</p> -->
+           </div>
+
+           <div class="icon-content">
+
+           </div>
+        </div>
+
+        <div class="media-icons">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+            <a href="#"><i class='bx bxl-tiktok'></i></a>
+        </div>
+
+        <div class="slider-switch">
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </main>
+
+
+
+
+
+    <script>
+
+
+        // FOR THE VIDEOS SWICTH BUTTONS 
+        const btns = document.querySelectorAll('.nav-btn')
+        const slides = document.querySelectorAll('.video-slide')
+
+        var sliderNav = function(manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove('active')
+            })
+
+            slides.forEach((slide) => {
+                slide.classList.remove('active')
+            })
+
+            btns[manual].classList.add('active')
+            slides[manual].classList.add('active')
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                sliderNav(i);
+            })
+        })
+    </script>
+</body>
+</html>

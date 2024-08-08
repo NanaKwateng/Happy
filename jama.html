@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="auathor" content="HOP">
+    <meta name="description" content="This page was designed to assist all who have by one way or another had an encounter with the Prophet of God">
+    <title>HOp Jama Group</title>
+
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/jama.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="images/logo1.jpg" type="image/x-icon">
+</head>
+<body>
+
+        
+        <!-- =================== HEADER SECTION ====================== -->
+    <header class="header">
+        <a href="app.html" style="font-size: 2.5em;">&LeftArrow;</a>
+        <div class="logo">
+        <h3>Jama Group</h3>
+
+    </div>
+
+
+
+    <div class="icons">
+        <!-- <button id="menuIcon"><i class='bx bx-menu'></i></button> -->
+        <div class="button">sign-in</div>
+    </div>
+
+    </header>
+    <!-- ======================= HEADER SECTION =====================  -->
+
+  <section>
+        <div class="container">
+            <div class="word-description">
+                
+                <h3>HOP JAMA</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cumque maxime iusto impedit saepe recusandae accusantium deserunt deleniti animi modi aperiam provident eius, voluptatem hic minus reprehenderit dignissimos dolorem eos earum suscipit esse quos. Explicabo sapiente repellat, excepturi asperiores enim, veniam dolore numquam nostrum neque dolorum, accusantium reiciendis! Officia quas vitae alias facilis, maiores fugit, cum nemo id laborum facere tempore sunt illum vero totam accusamus, commodi tempora. Voluptatibus rerum laborum doloribus dolorum perspiciatis hic rem, voluptatum ab maxime excepturi? Eum voluptas eaque ut ipsa et suscipit provident accusamus perferendis quia maiores reiciendis illo accusantium labore incidunt, ad consequuntur molestiae?</p>
+            </div>
+
+
+            <div class="image-gallery">
+                <img src="images/stick.jpg" alt="Image 1" class="gallery-image" width="600px" height="500px">
+                <img src="images/whistles.jpg" alt="Image 2" class="gallery-image" width="600px" height="500px">
+                <img src="image3.jpg" alt="Image 3" class="gallery-image" width="600px" height="500px">
+                <img src="images/drum sticks.jpg" alt="Image 4" class="gallery-image" width="600px" height="500px">
+                <img src="images/eden1.jpg" alt="Image 5" class="gallery-image" width="600px" height="500px">
+            </div>
+        </div>
+  </section>
+
+
+  <script>
+
+    const images = document.querySelectorAll('.gallery-image');
+    let currentIndex = 0;
+
+    function animateImages() {
+        images.forEach((image, index) => {
+            if (index === currentIndex) {
+                image.style.animationName = 'riseAndShake';
+                image.style.opacity = 1;
+            } else {
+                image.style.opacity = 0;
+            }
+        });
+
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            animateImages();
+        }, 5000); // Change image every 5 seconds
+    }
+
+    animateImages();
+  </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+
+
+:root {
+    --first-color: #2e2e41;
+    --second-color: #5b85ff;
+    --third-color: #434354;
+    --text-color: #555;
+    --box-shadow: 0 5px 25px rgb(2, 2, 2, .1);
+    --text-shadow: 0 5px 25px rgb(2, 2, 2, .1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    outline: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+
+}
+
+section {
+    position: relative;
+    margin: 0 80px;
+    transition: .5s ease;
+}
+
+.main-container {
+    position: relative;
+}
+
+.tab-menu {
+    color: var(--text-color);
+    background: var(--third-color);
+    max-width: 800px;
+    padding: 10px;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--third-color);
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.tab-menu.dragging {
+    scroll-behavior: unset;
+    cursor: grab;
+}
+
+.tab-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-nav-bar {
+    position: relative;
+    margin: 65px 10px 40px 10px;
+}
+
+.tab-navigation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.tab-btn {
+    color: #fff;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0 2px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+    transition: .3s ease;
+}
+.tab-btn:hover {
+    background: var(--first-color);
+}
+.tab-btn.active {
+    background: var(--second-color);
+}
+
+.left-btn, .right-btn {
+    position: absolute;
+    color: var(--text-color);
+    font-size: 1.8em;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.left-btn {
+    left: 0;
+    background: linear-gradient(to left, transparent, var(--first-color) 80%);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: none;
+}
+
+.right-btn {
+    right: 0;
+    background: linear-gradient(to right, transparent, var(--first-color) 80%);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+
+
+/* ---------------------TAB-CONTENT------------------- */
+.tab-content {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.tab {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    max-width: 1100px;
+    padding: 15px 50px;
+    transform: translateX(25px);
+    content-visibility: hidden;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.tab.active{
+    transform: translateX(0);
+    content-visibility: visible;
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+
+.tab .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    gap: 30px;
+}
+
+.tab .img-card {
+    position: relative;
+    width: 450px;
+    height: 350px;
+    max-width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.img-card img {
+    width: 100%;
+    height: 100%;
+}
+
+.right-column {
+    max-width: 800px;
+}
+
+.info .city, .info p {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.country {
+    font-size: 5em;
+    color: var(--third-color);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+}
+
+
+/* --------------- RESPONSIVENESS ---------------*/
+@media (max-width:1058px) {
+    section {
+        margin: 0 0;
+    }
+
+    .tab-nav-bar {
+        margin: 65px 20px 40px 25px;
+    }
+
+    .tab {
+        padding: 20px  25px;
+    }
+
+    .tab .row {
+        flex-direction: column;
+    }
+
+    .tab .img-card {
+        width: initial;
+        max-width: 100%;
+    }
+
+    .country {
+        font-size: 10vh;
+        padding-bottom: 50px;
+    }
+}
+
+
